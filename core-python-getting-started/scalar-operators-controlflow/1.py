@@ -3,7 +3,7 @@ while True:
     num = input()
     if num == "stop":
         break
-    else:
+    else: 
         try:
             num = int(num)
             if num > 0 and num <= 5:
