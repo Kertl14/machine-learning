@@ -1,4 +1,20 @@
-def __idsuffix__(x):
+"""Reformats and prints a number as a string with the correct 'nth' suffix.
+
+Usage:
+    python3 suffix.py <number>
+"""
+
+import sys
+
+def idsuffix(x):
+    """Identifies the correct suffix to use for the number argument.
+    
+    Args:
+        x: number that the suffix should be retrieved for.
+        
+    Returns:
+        Just the appropriate suffix.
+    """
     s = str(x)
     if s.endswith("11"):
         return "th"
@@ -15,18 +31,24 @@ def __idsuffix__(x):
     else:
         return "th"
 
-def __numformat__(x):
+
+def numformat(x):
+    """Returns a string that contains the concatenated value of the number argument and its appropriate suffix.
+       
+    Args:
+        x: the number to be returned.
+        
+    Returns:
+        The number plus its apprpriate suffix.
+    """
     numstr = str(x)
-    final = numstr + __idsuffix__(x)
+    final = numstr + idsuffix(x)
     return final
     
-while True:
-    num = input("Please enter an Integer or type 'stop' to exit: ")
-    if num == "stop":
-        break
-    try:
-        num = int(num)
-        print(__numformat__(num))
-    except ValueError:
-        print("That is not an Integer.")
     
+def main(num):
+    print(numformat(num))
+    
+    
+if __name__ == "__main__":
+    main(sys.argv[1])

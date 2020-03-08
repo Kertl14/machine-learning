@@ -1,0 +1,7 @@
+Help on function main in module words:
+
+mmaaiinn(url)
+    Retrieve and print words from a URL.
+    
+    Args:
+        url: the URL of a UTF-8 encoded document.
