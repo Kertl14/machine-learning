@@ -19,7 +19,7 @@ def numrel():
     elif num < -5:
         print("num is less than -5!")
     elif num == 0:
-        print("The number is Zero!")
+        print("The number is zero!")
 
             
 if __name__ == '__main__':
